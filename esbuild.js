@@ -13,7 +13,7 @@ await esbuild.build({
   format: "esm",
   sourcemap: "inline",
   platform: "node",
-  // minify: true,
+  minify: true,
   bundle: true,
   banner: { js: commonJsPloyfil },
   outdir: "dist",

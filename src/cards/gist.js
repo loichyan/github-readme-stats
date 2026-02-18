@@ -22,7 +22,8 @@ import { parseEmojis } from "../common/ops.js";
  */
 // import { createRequire } from "module";
 // const require = createRequire(import.meta.url);
-const languageColors = require("../common/languageColors.json"); // now works
+// const languageColors = require("../common/languageColors.json"); // now works
+import languageColors from "../common//languageColors.js";
 
 const ICON_SIZE = 16;
 const CARD_DEFAULT_WIDTH = 400;

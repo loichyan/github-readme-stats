@@ -8,7 +8,7 @@ const LANGS_FILEPATH = "./src/common/languageColors.json";
 //@ts-ignore
 axios
   .get(
-    "https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml",
+    "https://raw.githubusercontent.com/github-linguist/linguist/main/lib/linguist/languages.yml",
   )
   .then((response) => {
     //and convert them to a JS Object
@@ -18,7 +18,10 @@ axios
 
     //Filter only language colors from the whole file
     Object.keys(languages).forEach((lang) => {
-      languageColors[lang] = languages[lang].color;
+      languageColors[lang.toLowerCase()] = languages[lang].color;
+      (languages[lang].aliases || []).forEach((alias) => {
+        languageColors[alias.toLowerCase()] = languages[lang].color;
+      });
     });
 
     //Debug Print

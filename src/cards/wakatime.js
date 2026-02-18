@@ -16,7 +16,8 @@ import { wakatimeCardLocales } from "../translations.js";
  */
 // import { createRequire } from "module";
 // const require = createRequire(import.meta.url);
-const languageColors = require("../common/languageColors.json"); // now works
+// const languageColors = require("../common/languageColors.json"); // now works
+import languageColors from "../common//languageColors.js";
 
 const DEFAULT_CARD_WIDTH = 495;
 const MIN_CARD_WIDTH = 250;
